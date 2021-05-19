@@ -16,6 +16,54 @@ services:
         restart_policy:
           condition: on-failure
 
+  #Different markets can be specified as below
+
+  maticusdt:
+    build:
+      context: .
+    container_name: maticusdt
+    volumes:
+      - ./market/MATICUSDT/config.json:/app/config.json
+      - ./market/MATICUSDT/pycryptobot.log:/app/pycryptobot.log
+      - ./market/MATICUSDT/graphs:/app/graphs
+      - /etc/localtime:/etc/localtime:ro
+    environment:
+      - PYTHONUNBUFFERED=1
+    deploy:
+      restart_policy:
+        condition: on-failure
+
+
+  btcusdt:
+    build:
+      context: .
+    container_name: btcusdt
+    volumes:
+      - ./market/BTCUSDT/config.json:/app/config.json
+      - ./market/BTCUSDT/pycryptobot.log:/app/pycryptobot.log
+      - ./market/BTCUSDT/graphs:/app/graphs
+      - /etc/localtime:/etc/localtime:ro
+    environment:
+      - PYTHONUNBUFFERED=1
+    deploy:
+      restart_policy:
+        condition: on-failure
+
+  ethusdt:
+    build:
+      context: .
+    container_name: ethusdt
+    volumes:
+      - ./market/ETHUSDT/config.json:/app/config.json
+      - ./market/ETHUSDT/pycryptobot.log:/app/pycryptobot.log
+      - ./market/ETHUSDT/graphs:/app/graphs
+      - /etc/localtime:/etc/localtime:ro
+    environment:
+      - PYTHONUNBUFFERED=1
+    deploy:
+      restart_policy:
+        condition: on-failure
+
 #  Different markets can be specified as below
 #
 #  BTCEUR:
@@ -47,3 +95,4 @@ services:
 #    deploy:
 #      restart_policy:
 #        condition: on-failure
+

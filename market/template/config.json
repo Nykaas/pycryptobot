@@ -1,15 +1,19 @@
 {
-    "coinbasepro" : {
-        "api_url" : "https://api.pro.coinbase.com",
-        "api_key" : "<removed>",
-        "api_secret" : "<removed>",
-        "api_passphrase" : "<removed>",
+    "binance" : {
+        "api_url" : "https://api.binance.com",
+        "api_key" : "xVpVNfo7svQQQGcsFoISsq0vj7RdIgftR7Tayf4HsvTGR263h1amGgh7P8Vt3DeH",
+        "api_secret" : "f2eXSr6jMKt1CtKSCRrKQxOS4kXvBU2FIvrCAL09PDpHS7cADN6PEjzklQQ7w9Ox",
         "config" : {
-            "base_currency" : "BTC",
-            "quote_currency" : "EUR",
-            "granularity" : "3600",
+            "base_currency" : "ETH",
+            "quote_currency" : "USDT",
+            "granularity" : "1h",
             "live" : 0,
-            "verbose" : 0
-        }
+            "sellatloss" : 0,
+            "disablebullonly" : 1,
+            "disablebuyobv" : 1,
+            "disablebuyelderray" : 1,
+            "disablelog" : 1,
+            "disabletracker" : 1
+        }        
     }
 }
